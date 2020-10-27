@@ -16,3 +16,11 @@ const Start = () => {
 };
 
 btn.onclick = Start;
+
+let secGame = document.querySelector('.second_game');
+
+const toFlappy = () => {
+    document.location.href = 'flappy.html';
+}
+secGame.addEventListener('click', toFlappy);
+
