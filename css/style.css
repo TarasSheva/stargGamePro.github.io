@@ -59,10 +59,14 @@ body {
 .first_game, .second_game {
     font-size: 22px;
     padding: 20px;
+    cursor: pointer;
+    outline: none;
 
 }
 .first_game:hover,
 .second_game:hover {
     color: cornflowerblue;
     text-shadow: 0 0 10px white;
+    cursor: pointer;
+    outline: none;
 }

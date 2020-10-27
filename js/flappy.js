@@ -37,7 +37,7 @@ let pipe = [];
 pipe[0] = {
     x : cvs.width,
     y : 0
-}
+};
 
 let score = 0;
 // Позиция птички
@@ -66,7 +66,10 @@ function draw() {
             && xPos <= pipe[i].x + pipeUp.width
             && (yPos <= pipe[i].y + pipeUp.height
                 || yPos + bird.height >= pipe[i].y + pipeUp.height + gap) || yPos + bird.height >= cvs.height - fg.height) {
-            stop(); // Перезагрузка страницы
+            ctx.fillStyle = "#000";
+            ctx.font = "24px Verdana";
+            ctx.fillText('Game Over:' + score, 50, 200);
+            setTimeout(() => location.reload(), 5000); // Перезагрузка страницы
         }
 
         if(pipe[i].x == 5) {
@@ -88,8 +91,25 @@ function draw() {
 
 
 }
-function stop () {
-    cancelAnimationFrame(draw);
-}
+function start() {
+    ctx.drawImage(bg, 0, 0);
 
-pipeBottom.onload = draw;
+    ctx.drawImage(pipeUp, 100, 0);
+    ctx.drawImage(pipeBottom, 100, pipeUp.height + gap);
+
+    ctx.drawImage(fg, 0, cvs.height - fg.height);
+    ctx.drawImage(bird, xPos, yPos);
+
+    ctx.fillStyle = "#000";
+    ctx.font = "24px Verdana";
+    ctx.fillText('Press to START', 50, 200);
+
+    window.addEventListener('click', draw);
+
+}
+start();
+
+
+
+
+
