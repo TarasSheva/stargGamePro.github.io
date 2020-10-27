@@ -48,3 +48,22 @@ body {
     text-shadow: 0 0 18px white;
     color: red;
 }
+
+/*************************************/
+.selection_game {
+    display: none;
+}
+.games_list {
+    text-align: center;
+    margin: 150px auto;
+}
+.first_game, .second_game {
+    font-size: 22px;
+    padding: 20px;
+
+}
+.first_game:hover,
+.second_game:hover {
+    color: cornflowerblue;
+    text-shadow: 0 0 10px white;
+}
