@@ -50,10 +50,9 @@ body {
 }
 
 /*************************************/
-.selection_game {
-    display: none;
-}
+
 .games_list {
+    display: none;
     text-align: center;
     margin: 150px auto;
 }
