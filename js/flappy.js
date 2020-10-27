@@ -71,7 +71,7 @@ function draw() {
             ctx.fillStyle = "#000";
             ctx.font = "24px Verdana";
             ctx.fillText('Game Over:' + score, 50, 200);
-            setTimeout(() => location.reload(), 5000); // Перезагрузка страницы
+            setTimeout(() => location.reload(), 2000); // Перезагрузка страницы
         }
 
         if(pipe[i].x === 5) {

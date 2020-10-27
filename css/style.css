@@ -71,11 +71,25 @@ body {
     outline: none;
 }
 
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#canvas {
+    width: 288px;
+    height: 512px;
+}
 .bt_press {
     position: absolute;
     top: 250px;
-    left: 90px;
+    left: 0;
+    right: 0;
     cursor: pointer;
-    font-size: 36px;
-
+    color: white;
+    text-shadow: 0 0 20px black;
+    font-size: 60px;
+    font-family: 'Turret Road', cursive;
+    font-weight: bold;
 }
