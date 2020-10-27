@@ -1,5 +1,7 @@
+
+
 let cvs = document.querySelector('#canvas');
-let ctx = canvas.getContext('2d');
+let ctx = cvs.getContext('2d');
 
 let bird = new Image();
 let bg = new Image();
@@ -54,7 +56,7 @@ function draw() {
 
         pipe[i].x--;
 
-        if(pipe[i].x == 100) {
+        if(pipe[i].x === 100) {
             pipe.push({
                 x : cvs.width,
                 y : Math.floor(Math.random() * pipeUp.height) - pipeUp.height
@@ -72,7 +74,7 @@ function draw() {
             setTimeout(() => location.reload(), 5000); // Перезагрузка страницы
         }
 
-        if(pipe[i].x == 5) {
+        if(pipe[i].x === 5) {
             score+=10;
             score_audio.play();
         }
@@ -100,15 +102,20 @@ function start() {
     ctx.drawImage(fg, 0, cvs.height - fg.height);
     ctx.drawImage(bird, xPos, yPos);
 
-    ctx.fillStyle = "#000";
-    ctx.font = "24px Verdana";
-    ctx.fillText('Press to START', 50, 200);
+    // ctx.fillStyle = "#000";
+    // ctx.font = "24px Verdana";
+    // ctx.fillText('Press to START', 50, 200);
 
-    window.addEventListener('click', draw);
+
+    let btPress = document.querySelector('.bt_press');
+    btPress.onclick = function () {
+        btPress.style.display = 'none';
+        draw();
+    }
+
 
 }
 start();
-
 
 
 

@@ -70,3 +70,12 @@ body {
     cursor: pointer;
     outline: none;
 }
+
+.bt_press {
+    position: absolute;
+    top: 250px;
+    left: 90px;
+    cursor: pointer;
+    font-size: 36px;
+
+}
