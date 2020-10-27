@@ -24,6 +24,7 @@ let gap = 100;
 
 // При нажатии на какую-либо кнопку
 document.addEventListener("keydown", moveUp);
+document.addEventListener('touchstart', moveUp);
 
 function moveUp() {
     yPos -= 20;
@@ -65,7 +66,7 @@ function draw() {
             && xPos <= pipe[i].x + pipeUp.width
             && (yPos <= pipe[i].y + pipeUp.height
                 || yPos + bird.height >= pipe[i].y + pipeUp.height + gap) || yPos + bird.height >= cvs.height - fg.height) {
-            location.reload(); // Перезагрузка страницы
+            stop(); // Перезагрузка страницы
         }
 
         if(pipe[i].x == 5) {
@@ -84,6 +85,11 @@ function draw() {
     ctx.fillText("Score: " + score, 10, cvs.height - 20);
 
     requestAnimationFrame(draw);
+
+
+}
+function stop () {
+    cancelAnimationFrame(draw);
 }
 
 pipeBottom.onload = draw;
