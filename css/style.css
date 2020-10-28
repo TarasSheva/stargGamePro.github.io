@@ -93,39 +93,80 @@ body {
 /*    font-family: 'Turret Road', cursive;*/
 /*    font-weight: bold;*/
 /*}*/
+#game_1 {
+    width: 500px;
+    height: 200px;
+    border: 1px solid white;
+    margin: auto;
+    overflow: hidden;
+}
+#character_1 {
+    width: 20px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    top: 150px;
+}
+.animate {
+    animation: jump 500ms;
+}
+@keyframes jump {
+    0%{top: 150px}
+    30%{top: 100px}
+    70%{top: 100px}
+    100%{top: 150px}
+}
 
-#game {
+#block_1 {
+    width: 20px;
+    height: 20px;
+    background-color: teal;
+    position: relative;
+    top: 130px;
+    left: 480px;
+    animation: block_1 2s infinite linear;
+}
+
+@keyframes block_1 {
+    0%{left: 480px}
+    100%{left: -40px}
+}
+
+
+
+
+#game_2 {
     width: 300px;
     height: 500px;
     border: 1px solid white;
     margin: auto;
     overflow: hidden;
 }
-#block {
+#block_2 {
     width: 50px;
     height: 500px;
     background-color: white;
     position: relative;
     left: 400px;
-    animation: block 2s infinite linear;
+    animation: block_2 2s infinite linear;
 }
 
-@keyframes block {
+@keyframes block_2 {
     0%{left: 400px}
     100%{left: -50px}
 }
 
-#hole {
+#hole_2 {
     width: 50px;
     height: 170px;
     background-color: teal;
     position: relative;
     top: -500px;
     left: 400px;
-    animation: block 2s infinite linear;
+    animation: block_2 2s infinite linear;
 }
 
-#character {
+#character_2 {
     width: 20px;
     height: 20px;
     background-color: red;

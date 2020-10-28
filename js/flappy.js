@@ -117,9 +117,9 @@
 // }
 // start();
 
-let block = document.getElementById('block');
-let hole = document.getElementById('hole');
-let character = document.getElementById('character');
+let block = document.getElementById('block_2');
+let hole = document.getElementById('hole_2');
+let character = document.getElementById('character_2');
 let jumping = 0;
 let score = 0;
 
@@ -139,7 +139,6 @@ setInterval(function () {
     let holeTop = parseInt(window.getComputedStyle(hole).getPropertyValue('top'));
     let cTop = -(500 - characterTop);
     if (characterTop > 480 || (blockLeft<20 && blockLeft > -50 && (cTop < holeTop || cTop > holeTop+150))) {
-        console.log(holeTop)
         alert("Game over. Score:" + score);
         character.style.top = 100 + 'px';
         score = 0;

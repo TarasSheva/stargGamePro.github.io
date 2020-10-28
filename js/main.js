@@ -17,10 +17,17 @@ const Start = () => {
 
 btn.onclick = Start;
 
+let firGame = document.querySelector('.first_game');
+
+const toDragon = () => {
+    document.location.href = 'dragon.html';
+}
+firGame.addEventListener('click', toDragon);
+
 let secGame = document.querySelector('.second_game');
 
-const toFlappy = () => {
+const toBounce = () => {
     document.location.href = 'flappy.html';
 }
-secGame.addEventListener('click', toFlappy);
+secGame.addEventListener('click', toBounce);
 
