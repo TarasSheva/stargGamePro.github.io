@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" onclick="jump()">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -9,12 +9,18 @@
     <title>STarG</title>
 </head>
 <body>
-<div class="container">
-    <canvas id="canvas" width="288" height="512">
 
-    </canvas>
-    <div class="bt_press">START</div>
+<div id="game">
+    <div id="block"></div>
+    <div id="hole"></div>
+    <div id="character"></div>
 </div>
+<!--<div class="container">-->
+<!--    <canvas id="canvas" width="288" height="512">-->
+
+<!--    </canvas>-->
+<!--    <div class="bt_press">START</div>-->
+<!--</div>-->
 </body>
 <script src="js/flappy.js"></script>
 </html>

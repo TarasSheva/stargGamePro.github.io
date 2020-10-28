@@ -72,24 +72,64 @@ body {
 }
 
 
-.container {
-    margin: 0 auto;
-    text-align: center;
+/*.container {*/
+/*    margin: 0 auto;*/
+/*    text-align: center;*/
+/*}*/
+
+/*#canvas {*/
+/*    width: 288px;*/
+/*    height: 512px;*/
+/*}*/
+/*.bt_press {*/
+/*    position: absolute;*/
+/*    top: 250px;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    cursor: pointer;*/
+/*    color: white;*/
+/*    text-shadow: 0 0 20px black;*/
+/*    font-size: 60px;*/
+/*    font-family: 'Turret Road', cursive;*/
+/*    font-weight: bold;*/
+/*}*/
+
+#game {
+    width: 400px;
+    height: 500px;
+    border: 1px solid white;
+    margin: auto;
+    overflow: hidden;
+}
+#block {
+    width: 50px;
+    height: 500px;
+    background-color: white;
+    position: relative;
+    left: 400px;
+    animation: block 2s infinite linear;
 }
 
-#canvas {
-    width: 288px;
-    height: 512px;
+@keyframes block {
+    0%{left: 400px}
+    100%{left: -50px}
 }
-.bt_press {
+
+#hole {
+    width: 50px;
+    height: 150px;
+    background-color: teal;
+    position: relative;
+    top: -500px;
+    left: 400px;
+    animation: block 2s infinite linear;
+}
+
+#character {
+    width: 20px;
+    height: 20px;
+    background-color: red;
     position: absolute;
-    top: 250px;
-    left: 0;
-    right: 0;
-    cursor: pointer;
-    color: white;
-    text-shadow: 0 0 20px black;
-    font-size: 60px;
-    font-family: 'Turret Road', cursive;
-    font-weight: bold;
+    top: 100px;
+    border-radius: 50%;
 }
