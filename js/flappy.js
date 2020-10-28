@@ -120,8 +120,18 @@
 let block = document.getElementById('block_2');
 let hole = document.getElementById('hole_2');
 let character = document.getElementById('character_2');
+let modal = document.getElementById('modal');
+let restart = document.getElementById('rest');
+let back = document.getElementById('back');
 let jumping = 0;
 let score = 0;
+
+restart.addEventListener('click', () => {
+    location.reload();
+});
+back.addEventListener('click', () => {
+    document.location.href = 'index.html';
+});
 
 hole.addEventListener('animationiteration', () => {
     let random = Math.random()*3;
@@ -139,11 +149,16 @@ setInterval(function () {
     let holeTop = parseInt(window.getComputedStyle(hole).getPropertyValue('top'));
     let cTop = -(500 - characterTop);
     if (characterTop > 480 || (blockLeft<20 && blockLeft > -50 && (cTop < holeTop || cTop > holeTop+150))) {
-        alert("Game over. Score:" + score);
         character.style.top = 100 + 'px';
+        block.style.display = 'none';
+        modal.style.display = 'block';
+        // let rest = confirm('Restart?');
+        // if (rest) {
+        //     location.reload()
+        // }
         score = 0;
     }
-}, 10);
+}, 15);
 
 function jump() {
     jumping = 1;

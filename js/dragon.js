@@ -1,5 +1,15 @@
 let character = document.getElementById('character_1');
 let block = document.getElementById('block_1');
+let modal = document.getElementById('modal');
+let restart = document.getElementById('rest');
+let back = document.getElementById('back');
+
+restart.addEventListener('click', () => {
+    location.reload();
+});
+back.addEventListener('click', () => {
+    document.location.href = 'index.html';
+})
 
 function jumpDragon() {
     if (character.classList != 'animate') {
@@ -16,9 +26,6 @@ const chekDead = setInterval(function () {
     if (blockLeft < 20 && blockLeft > 0 && characterTop >= 130) {
         block.style.animation = 'none';
         block.style.display = 'none';
-        let rest = confirm('Restart?');
-        if (rest) {
-            location.reload()
-        }
+        modal.style.display = 'block';
     }
 }, 10);
