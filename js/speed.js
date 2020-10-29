@@ -3,6 +3,7 @@ let character = document.getElementById('character_3');
 let modal = document.getElementById('modal');
 let restart = document.getElementById('rest');
 let back = document.getElementById('back');
+let scoreTag = document.getElementById('score');
 let score = 0;
 
 
@@ -31,7 +32,8 @@ block.addEventListener('animationiteration', () => {
     let random = Math.floor(Math.random()*3);
     left = random * 100;
     block.style.left = left + 'px';
-    score++;
+    score+=10;
+    scoreTag.innerHTML = `${score} point`;
 });
 
 setInterval(() =>{

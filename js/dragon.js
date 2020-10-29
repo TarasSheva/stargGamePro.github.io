@@ -3,12 +3,16 @@ let block = document.getElementById('block_1');
 let modal = document.getElementById('modal');
 let restart = document.getElementById('rest');
 let back = document.getElementById('back');
+let scoreTag = document.getElementById('score');
+let score = 0;
 
 restart.addEventListener('click', () => {
     location.reload();
 });
 back.addEventListener('click', () => {
     document.location.href = 'index.html';
+    score+=10;
+    scoreTag.innerHTML = `${score} point`;
 })
 
 function jumpDragon() {

@@ -123,6 +123,7 @@ let character = document.getElementById('character_2');
 let modal = document.getElementById('modal');
 let restart = document.getElementById('rest');
 let back = document.getElementById('back');
+let scoreTag = document.getElementById('score');
 let jumping = 0;
 let score = 0;
 
@@ -138,6 +139,7 @@ hole.addEventListener('animationiteration', () => {
     let top = (random * 100) + 150;
     hole.style.top = -(top) + 'px';
     score+=10;
+    scoreTag.innerHTML = `${score} point`;
 });
 
 setInterval(function () {
@@ -149,14 +151,11 @@ setInterval(function () {
     let holeTop = parseInt(window.getComputedStyle(hole).getPropertyValue('top'));
     let cTop = -(500 - characterTop);
     if (characterTop > 480 || (blockLeft<20 && blockLeft > -50 && (cTop < holeTop || cTop > holeTop+150))) {
-        character.style.top = 100 + 'px';
+        character.style.display = 'none';
         block.style.display = 'none';
         modal.style.display = 'block';
-        // let rest = confirm('Restart?');
-        // if (rest) {
-        //     location.reload()
-        // }
-        score = 0;
+        // score = 0;
+        clearInterval();
     }
 }, 15);
 
