@@ -116,7 +116,7 @@
 //
 // }
 // start();
-
+let status = true;
 let block = document.getElementById('block_2');
 let hole = document.getElementById('hole_2');
 let character = document.getElementById('character_2');
@@ -127,6 +127,7 @@ let scoreTag = document.getElementById('score');
 let jumping = 0;
 let score = 0;
 
+
 restart.addEventListener('click', () => {
     location.reload();
 });
@@ -135,11 +136,13 @@ back.addEventListener('click', () => {
 });
 
 hole.addEventListener('animationiteration', () => {
-    let random = Math.random()*3;
-    let top = (random * 100) + 150;
-    hole.style.top = -(top) + 'px';
-    score+=10;
-    scoreTag.innerHTML = `${score} point`;
+    if (status) {
+        let random = Math.random() * 3;
+        let top = (random * 100) + 150;
+        hole.style.top = -(top) + 'px';
+        score += 10;
+        scoreTag.innerHTML = `${score} point`;
+    }
 });
 
 setInterval(function () {
@@ -156,6 +159,7 @@ setInterval(function () {
         modal.style.display = 'block';
         // score = 0;
         clearInterval();
+        status = false;
     }
 }, 15);
 

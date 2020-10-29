@@ -13,6 +13,7 @@ body {
     display: block;
 }
 .logo {
+    /*position: relative;*/
     color: deeppink;
     text-shadow: 0 0 20px white;
     text-align: center;
@@ -121,7 +122,8 @@ body {
 }
 
 #game_1 {
-    width: 500px;
+    position: relative;
+    width: 350px;
     height: 200px;
     border: 1px solid white;
     margin: auto;
@@ -163,7 +165,8 @@ body {
 
 
 #game_2 {
-    width: 300px;
+    position: relative;
+    width: 350px;
     height: 500px;
     border: 1px solid white;
     margin: auto;
@@ -174,22 +177,22 @@ body {
     height: 500px;
     background-color: white;
     position: relative;
-    left: 400px;
+    left: 450px;
     animation: block_2 2s infinite linear;
 }
 
 @keyframes block_2 {
-    0%{left: 400px}
+    0%{left: 450px}
     100%{left: -50px}
 }
 
 #hole_2 {
     width: 50px;
     height: 170px;
-    background-color: teal;
+    background-color: black;
     position: relative;
     top: -500px;
-    left: 400px;
+    left: 450px;
     animation: block_2 2s infinite linear;
 }
 
@@ -203,6 +206,7 @@ body {
 }
 
 #game_3 {
+    position: relative;
     width: 300px;
     height: 500px;
     border: 1px solid white;
