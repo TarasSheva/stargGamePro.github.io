@@ -52,7 +52,6 @@ body {
 /*************************************/
 
 .games_list {
-    display: none;
     text-align: center;
     margin: 150px auto;
 }
@@ -105,7 +104,7 @@ body {
     height: 300px;
     border: 1px solid white;
     text-align: center;
-    padding: 50px 10px;
+    padding: 30px 10px;
     background: black;
 }
 #rest, #back {

@@ -10,10 +10,8 @@ restart.addEventListener('click', () => {
     location.reload();
 });
 back.addEventListener('click', () => {
-    document.location.href = 'index.html';
-    score+=10;
-    scoreTag.innerHTML = `${score} point`;
-})
+    document.location.href = 'games.html';
+});
 
 function jumpDragon() {
     if (character.classList != 'animate') {
@@ -21,6 +19,7 @@ function jumpDragon() {
     }
     setTimeout(function () {
         character.classList.remove('animate');
+        score+=10;
     },500)
 }
 
@@ -31,5 +30,6 @@ const chekDead = setInterval(function () {
         block.style.animation = 'none';
         block.style.display = 'none';
         modal.style.display = 'block';
+        scoreTag.innerHTML = `${score} point`;
     }
 }, 10);

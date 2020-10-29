@@ -50,7 +50,7 @@ restart.addEventListener('click', () => {
     location.reload();
 });
 back.addEventListener('click', () => {
-    document.location.href = 'index.html';
+    document.location.href = 'games.html';
 });
 
 document.getElementById('left').addEventListener('touchstart', moveLeft);
