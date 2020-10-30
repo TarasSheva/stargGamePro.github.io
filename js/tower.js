@@ -1,4 +1,4 @@
-for (let i=25; i>0; i--) {
+for (let i=20; i>0; i--) {
     let slider = document.createElement('div');
     slider.setAttribute('class', 'sld anim');
     slider.setAttribute('id', 'sld'+i);
@@ -42,6 +42,8 @@ function stopSlide(slider) {
     let onclick = 'stopSlide(' + (slider+1) + ')';
     document.getElementById('btn_4').setAttribute('onclick', onclick);
 }
+
+
 
 let modal = document.getElementById('modal');
 let restart = document.getElementById('rest');
