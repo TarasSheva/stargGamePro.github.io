@@ -61,7 +61,7 @@ body {
     text-align: center;
     margin: 150px auto;
 }
-.first_game, .second_game, .third_game {
+.first_game, .second_game, .third_game, .forty_game {
     font-size: 22px;
     padding: 20px;
     cursor: pointer;
@@ -70,7 +70,8 @@ body {
 }
 .first_game:hover,
 .second_game:hover,
-.third_game:hover {
+.third_game:hover,
+.forty_game:hover {
     color: cornflowerblue;
     text-shadow: 0 0 10px white;
     cursor: pointer;

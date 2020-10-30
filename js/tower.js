@@ -25,8 +25,8 @@ function stopSlide(slider) {
     let absDifference = Math.abs(difference);
     if (difference > width || difference < -width) {
         let score = `Score ${slider-1}`;
-        alert(score);
-        location.reload();
+        modal.style.display = 'block';
+        scoreTag.innerHTML = `${score} point`;
     }
     if (difference < 0) {
         left += absDifference;
@@ -42,3 +42,15 @@ function stopSlide(slider) {
     let onclick = 'stopSlide(' + (slider+1) + ')';
     document.getElementById('btn_4').setAttribute('onclick', onclick);
 }
+
+let modal = document.getElementById('modal');
+let restart = document.getElementById('rest');
+let back = document.getElementById('back');
+let scoreTag = document.getElementById('score');
+
+restart.addEventListener('click', () => {
+    location.reload();
+});
+back.addEventListener('click', () => {
+    document.location.href = 'games.html';
+});
