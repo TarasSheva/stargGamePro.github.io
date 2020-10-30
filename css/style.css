@@ -274,3 +274,42 @@ body {
     background-color: black;
     margin-top: 25px;
 }
+
+
+
+#game_4 {
+    width: 350px;
+    height: 500px;
+    margin: 0 auto;
+    border: 1px solid white;
+}
+#btn_4 {
+    font-size: 26px;
+    padding: 5px 20px;
+    border: 3px solid white;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: block;
+    background-color: teal;
+}
+#btn_4:active {
+    background-color: blue;
+}
+.sld {
+    visibility: hidden;
+    background-color: cornflowerblue;
+    width: 100px;
+    height: 20px;
+    position: relative;
+}
+#sld1 {
+    visibility: visible;
+}
+.anim {
+    animation: slider 4s infinite linear;
+}
+@keyframes slider {
+    0%{left: 0}
+    50%{left: 250px}
+    100%{left: 0}
+}
